@@ -9,7 +9,13 @@
 
 // Console.WriteLine(result);
 
-// №3
+//№3
+//int num = int.Parse(Console.ReadLine());
+//string result = ((num / 10) + (num % 10)) % 2 == 0 ? "Чётное" : "Не чётное";
+//Console.WriteLine(result);
+
+
+// №4
 //string s;
 //float x = float.Parse(Console.ReadLine());
 //float y = float.Parse(Console.ReadLine());
@@ -29,7 +35,7 @@
 
 //Console.WriteLine("Точка расположина:  " + s);
 
-// №4
+// №5
 //string s;
 //byte n = byte.Parse(Console.ReadLine());
 
@@ -45,7 +51,7 @@
 
 //Console.WriteLine(s);
 
-// №5
+// №6
 
 //byte n = byte.Parse(Console.ReadLine());
 //float num1 = float.Parse(Console.ReadLine());
@@ -70,3 +76,20 @@
 //    k++;
 
 //} while (k < n);
+
+//static double min(double a, double b) 
+//{
+//    double c = a + b;
+//    return c;
+//}
+
+//Console.WriteLine(min(2, 2));
+
+
+//№7
+//static string rotateNumber(int num)
+//{
+//    return ((num % 10) + "" + (num / 10 % 10) + "" + (num / 100)); 
+//}
+
+//Console.WriteLine(rotateNumber(123));
