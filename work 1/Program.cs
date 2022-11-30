@@ -93,3 +93,104 @@
 //}
 
 //Console.WriteLine(rotateNumber(123));
+
+// №8
+
+//static int[] Input() 
+//{
+//    Console.WriteLine("Колличество элементов массива n=");
+//    int n = int.Parse(Console.ReadLine());
+//    int[] a = new int[n];
+//    for (int i = 0; i < n; i++) {
+//        Console.Write("a[{0}]= ", i);
+//        a[i] = int.Parse(Console.ReadLine());
+//    }
+//    return a;
+//}
+
+//static void Print(int[] a)
+//{
+//    int count = a.Length;
+//    for (int i = 0; i < count; i++) {
+//        Console.Write(" {0} ", a[i]);
+//    }
+//    Console.WriteLine();
+//}
+
+//static void Change(int[] a)
+//{
+//    int count = a.Length;
+//    for (int i = 0; i < count; i++ ) {
+//        if (a[i] < 0 && a[i] % 3 != 0)
+//        {
+//            a[i] = -a[i];
+//        }
+//    }
+//}
+
+//int[] myArray = Input();
+//Console.WriteLine("Исходный массив: ");
+//Print(myArray);
+//Change(myArray);
+//Console.WriteLine("Изменённый массив: ");
+//Print(myArray);
+
+static int[,] Input()
+{
+    Console.WriteLine("Введите размерность массива ");
+    Console.WriteLine("n= ");
+    int n = int.Parse(Console.ReadLine());
+    Console.WriteLine("m= ");
+    int m = int.Parse(Console.ReadLine());
+    int[,] a = new int[n, m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++) 
+        {
+            Console.Write("a[{0},{1}]= ", i, j);
+            a[i,j] = int.Parse(Console.ReadLine());
+        }
+        
+    }
+    return a;
+}
+
+static void Print(int[,] a)
+{
+    int countN = a.GetLength(0);
+    int countM = a.GetLength(1);
+
+    for (int i = 0; i < countN; i++)
+    {
+        for (int j = 0; j < countM; j++)
+        {
+            Console.Write(" {0, 5} ", a[i, j]);
+        }
+        Console.WriteLine();
+    }
+    
+}
+
+static void Change(int[,] a)
+{
+    int countN = a.GetLength(0);
+    int countM = a.GetLength(1);
+    for (int i = 0; i < countN; i++)
+    {
+        for (int j = 0; j < countM; j++)
+        {
+            if (a[i, j] < 0 && a[i, j] % 3 != 0)
+            {
+                a[i, j] = -a[i, j];
+            }
+        }
+        
+    }
+}
+
+int[,] myArray = Input();
+Console.WriteLine("Исходный массив: ");
+Print(myArray);
+Change(myArray);
+Console.WriteLine("Изменённый массив: ");
+Print(myArray);
